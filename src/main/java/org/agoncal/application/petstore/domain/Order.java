@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 import java.util.List;
 import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Antonio Goncalves
@@ -19,6 +20,7 @@ import lombok.Getter;
         @NamedQuery(name = Order.FIND_ALL, query = "SELECT o FROM Order o")
 })
 @Getter
+@Setter
 public class Order {
 
     // ======================================
@@ -88,38 +90,6 @@ public class Order {
         }
 
         return total;
-    }
-
-    // ======================================
-    // =         Getters & setters          =
-    // ======================================
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
-    public void setOrderLines(List<OrderLine> orderLines) {
-        this.orderLines = orderLines;
-    }
-
-    public void setDeliveryAddress(Address deliveryAddress) {
-        this.deliveryAddress = deliveryAddress;
-    }
-
-    public void setCreditCard(CreditCard creditCard) {
-        this.creditCard = creditCard;
-    }
-
-    public void setCreditCardNumber(String creditCardNumber) {
-        creditCard.setCreditCardNumber(creditCardNumber);
-    }
-
-    public void setCreditCardType(CreditCardType creditCardType) {
-        creditCard.setCreditCardType(creditCardType);
-    }
-
-    public void setCreditCardExpiryDate(String creditCardExpiryDate) {
-        creditCard.setCreditCardExpDate(creditCardExpiryDate);
     }
 
     // ======================================

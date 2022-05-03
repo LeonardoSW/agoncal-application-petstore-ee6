@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Antonio Goncalves
@@ -26,6 +27,7 @@ import lombok.Getter;
 })
 @XmlRootElement
 @Getter
+@Setter
 public class Category {
 
     // ======================================
@@ -66,30 +68,10 @@ public class Category {
         this.description = description;
     }
 
-    // ======================================
-    // =         Getters & setters          =
-    // ======================================
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public void addProduct(Product product) {
         if (products == null)
             products = new ArrayList<Product>();
         products.add(product);
-    }
-
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
     }
 
     // ======================================

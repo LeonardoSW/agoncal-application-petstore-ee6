@@ -2,6 +2,7 @@ package org.agoncal.application.petstore.domain;
 
 import javax.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Antonio Goncalves
@@ -11,6 +12,7 @@ import lombok.Getter;
 
 @Entity
 @Getter
+@Setter
 public class OrderLine {
 
     // ======================================
@@ -44,18 +46,6 @@ public class OrderLine {
 
     public Float getSubTotal() {
         return item.getUnitCost() * quantity;
-    }
-
-    // ======================================
-    // =         Getters & setters          =
-    // ======================================
-    
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
-
-    public void setItem(Item item) {
-        this.item = item;
     }
 
     // ======================================

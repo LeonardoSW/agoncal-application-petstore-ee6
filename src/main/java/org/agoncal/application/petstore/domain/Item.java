@@ -9,6 +9,7 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Antonio Goncalves
@@ -24,6 +25,7 @@ import lombok.Getter;
 })
 @XmlRootElement
 @Getter
+@Setter
 public class Item {
 
     // ======================================
@@ -69,29 +71,6 @@ public class Item {
         this.unitCost = unitCost;
         this.imagePath = imagePath;
         this.product = product;
-        this.description = description;
-    }
-
-    // ======================================
-    // =         Getters & setters          =
-    // ======================================
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setUnitCost(Float unitCost) {
-        this.unitCost = unitCost;
-    }
-
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    public void setDescription(String description) {
         this.description = description;
     }
 
