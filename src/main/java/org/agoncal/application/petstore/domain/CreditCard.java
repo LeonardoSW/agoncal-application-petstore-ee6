@@ -6,13 +6,14 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import lombok.Getter;
 
 /**
  * @author Antonio Goncalves
  *         http://www.antoniogoncalves.org
  *         --
  */
-
+@Getter
 @Embeddable
 public class CreditCard {
 
@@ -50,24 +51,12 @@ public class CreditCard {
     // =         Getters & setters          =
     // ======================================
 
-    public String getCreditCardNumber() {
-        return creditCardNumber;
-    }
-
     public void setCreditCardNumber(String creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
     }
 
-    public CreditCardType getCreditCardType() {
-        return creditCardType;
-    }
-
     public void setCreditCardType(CreditCardType creditCardType) {
         this.creditCardType = creditCardType;
-    }
-
-    public String getCreditCardExpDate() {
-        return creditCardExpDate;
     }
 
     public void setCreditCardExpDate(String creditCardExpDate) {
